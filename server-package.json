@@ -1,0 +1,26 @@
+{
+  "name": "trading-signals-server",
+  "version": "1.0.0",
+  "description": "Socket.IO server for trading signals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.5",
+    "axios": "^1.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "trading",
+    "signals",
+    "socket.io",
+    "forex",
+    "crypto"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

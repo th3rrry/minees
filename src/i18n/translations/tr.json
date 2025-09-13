@@ -1,0 +1,149 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "retry": "Tekrar dene",
+    "close": "Kapat",
+    "back": "Geri",
+    "minutes": "dakika",
+    "next": "İleri",
+    "previous": "Önceki",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "yes": "Evet",
+    "no": "Hayır"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "trading": "Trading",
+    "signals": "Sinyaller",
+    "settings": "Ayarlar",
+    "language": "Dil"
+  },
+  "trading": {
+    "title": "Trading Sinyalleri",
+    "subtitle": "Analiz için bir döviz çifti seçin",
+    "description": "Gerçek zamanlı profesyonel sinyaller alın",
+    "selectPair": "Döviz Çifti Seç",
+    "currentPrice": "Güncel Fiyat",
+    "change24h": "24s Değişim",
+    "volume": "Hacim",
+    "high24h": "24s Yüksek",
+    "low24h": "24s Düşük",
+    "volatility": "Volatilite",
+    "live": "CANLI",
+    "lastUpdate": "Son Güncelleme",
+    "updating": "Güncelleniyor...",
+    "update": "Güncelle"
+  },
+  "chart": {
+    "title": "Grafik",
+    "technicalAnalysis": "Gerçek zamanlı teknik analiz",
+    "tradingView": "TradingView Grafiği"
+  },
+  "currency": {
+    "eurusd": "Euro / ABD Doları",
+    "gbpusd": "İngiliz Sterlini / ABD Doları",
+    "audcad": "Avustralya Doları / Kanada Doları",
+    "usdjpy": "ABD Doları / Japon Yeni",
+    "usdcad": "ABD Doları / Kanada Doları",
+    "nzdusd": "Yeni Zelanda Doları / ABD Doları",
+    "eurgbp": "Euro / İngiliz Sterlini",
+    "audusd": "Avustralya Doları / ABD Doları",
+    "btcusdt": "Bitcoin / Tether",
+    "ethusdt": "Ethereum / Tether",
+    "adausdt": "Cardano / Tether",
+    "dotusdt": "Polkadot / Tether",
+    "linkusdt": "Chainlink / Tether",
+    "uniusdt": "Uniswap / Tether",
+    "aaveusdt": "Aave / Tether",
+    "solusdt": "Solana / Tether",
+    "baseCurrency": "Ana Para Birimi",
+    "quoteCurrency": "Karşıt Para Birimi",
+    "selected": "Seçildi"
+  },
+  "status": {
+    "connected": "Bağlı",
+    "disconnected": "Bağlantı Kesildi",
+    "connecting": "Bağlanıyor...",
+    "updatesEvery5min": "Kripto para birimleri her 5 dakikada, Forex her 15 dakikada güncellenir"
+  },
+  "disclaimer": {
+    "title": "Sorumluluk reddi",
+    "text": "Bu bilgi yatırım, finansal, ticari veya başka bir tavsiye değildir. Kendi riskinizle kullanın. Geçmiş performans gelecekteki sonuçları garanti etmez."
+  },
+  "signals": {
+    "title": "Trading Sinyalleri",
+    "analysis": "Analiz",
+    "buy": "SATIN AL",
+    "sell": "SAT",
+    "neutral": "NÖTR",
+    "confidence": "Güven",
+    "explanation": "Sinyal Açıklaması",
+    "explanations": {
+      "priceInfo": "Fiyat {price} {trend} trendini gösteriyor, 24 saatte {change}% değişim",
+      "rsiInfo": "RSI {rsi} {condition} gösteriyor",
+      "macdInfo": "MACD {signal} sinyali gösteriyor",
+      "smaInfo": "SMA {period} mevcut fiyatın {position}",
+      "bollingerInfo": "Fiyat Bollinger Bantlarının {position}",
+      "volumeInfo": "İşlem hacmi ortalamanın {volume}",
+      "growthBuy": "Büyüme {change}%, {trend} trend, satın almayı öneriyorum",
+      "fallSell": "Düşüş {change}%, {trend} trend, satmayı öneriyorum",
+      "currentRate": "Mevcut kur {base}/{quote}: {rate}",
+      "highRate": "Kur {base}/{quote} yüksek: {rate}, olası büyüme",
+      "lowRate": "Kur {base}/{quote} düşük: {rate}, olası düşüş",
+      "timeInfo": "Saat: {hour}:{minute}",
+      "tradingHours": "İşlem saatleri ({hour}:{minute}), olası büyüme",
+      "nonTradingHours": "İşlem saatleri dışında ({hour}:{minute}), olası düşüş",
+      "dataUnavailable": "Veriler geçici olarak mevcut değil, nötr sinyal kullanılıyor",
+      "errorGettingData": "Veri alma hatası, nötr sinyal kullanılıyor"
+    },
+    "trends": {
+      "upward": "yükseliş",
+      "downward": "düşüş",
+      "sideways": "yan"
+    },
+    "crypto": "Kripto Para Birimleri",
+    "forex": "Forex",
+    "nextUpdate": "Sonraki güncelleme",
+    "progress": "İlerleme",
+    "interval": "Aralık",
+    "lastUpdate": "Son güncelleme",
+    "technicalAnalysis": "Teknik Analiz",
+    "technicalReasoning": "Teknik Gerekçe",
+    "technicalTerms": {
+      "rsiOversold": "RSI aşırı satım",
+      "rsiOverbought": "RSI aşırı alım", 
+      "macdBullish": "MACD yükseliş",
+      "macdBearish": "MACD düşüş",
+      "bollingerUpper": "Fiyat Bollinger Bands üzerinde",
+      "bollingerLower": "Fiyat Bollinger Bands altında",
+      "trendBullish": "Yükseliş trendi",
+      "trendBearish": "Düşüş trendi",
+      "priceChange": "Fiyat değişimi"
+    }
+  },
+  "expiration": {
+    "title": "Son Kullanma Tahmini",
+    "expiration": "Son Kullanma Süresi",
+    "entry": "Giriş Süresi",
+    "entryTime": "Giriş Süresi",
+    "expirationTime": "Son Kullanma Süresi",
+    "expired": "Süresi Dolmuş",
+    "confidence": "Güven",
+    "recommended": "Önerilen Süre",
+    "warning": "Optimal giriş süresi doldu, ancak sinyal hala geçerli",
+    "timeframes": {
+      "1min": "1 dakika",
+      "3min": "3 dakika", 
+      "5min": "5 dakika"
+    }
+  },
+  "errors": {
+    "connectionFailed": "Bağlantı başarısız",
+    "dataError": "Veri hatası",
+    "signalError": "Sinyal üretim hatası",
+    "priceError": "Fiyat veri hatası"
+  }
+}

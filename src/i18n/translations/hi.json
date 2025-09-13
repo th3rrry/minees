@@ -1,0 +1,149 @@
+{
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "retry": "पुनः प्रयास करें",
+    "close": "बंद करें",
+    "back": "वापस",
+    "minutes": "मिनट",
+    "next": "अगला",
+    "previous": "पिछला",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें",
+    "yes": "हाँ",
+    "no": "नहीं"
+  },
+  "navigation": {
+    "home": "होम",
+    "trading": "ट्रेडिंग",
+    "signals": "सिग्नल",
+    "settings": "सेटिंग्स",
+    "language": "भाषा"
+  },
+  "trading": {
+    "title": "ट्रेडिंग सिग्नल",
+    "subtitle": "विश्लेषण के लिए मुद्रा जोड़ी चुनें",
+    "description": "रियल टाइम में पेशेवर सिग्नल प्राप्त करें",
+    "selectPair": "मुद्रा जोड़ी चुनें",
+    "currentPrice": "वर्तमान मूल्य",
+    "change24h": "24 घंटे में परिवर्तन",
+    "volume": "वॉल्यूम",
+    "high24h": "24 घंटे में उच्चतम",
+    "low24h": "24 घंटे में निम्नतम",
+    "volatility": "अस्थिरता",
+    "live": "लाइव",
+    "lastUpdate": "अंतिम अपडेट",
+    "updating": "अपडेट हो रहा है...",
+    "update": "अपडेट करें"
+  },
+  "chart": {
+    "title": "चार्ट",
+    "technicalAnalysis": "रियल टाइम तकनीकी विश्लेषण",
+    "tradingView": "TradingView चार्ट"
+  },
+  "currency": {
+    "eurusd": "यूरो / अमेरिकी डॉलर",
+    "gbpusd": "ब्रिटिश पाउंड / अमेरिकी डॉलर",
+    "audcad": "ऑस्ट्रेलियाई डॉलर / कनाडाई डॉलर",
+    "usdjpy": "अमेरिकी डॉलर / जापानी येन",
+    "usdcad": "अमेरिकी डॉलर / कनाडाई डॉलर",
+    "nzdusd": "न्यूजीलैंड डॉलर / अमेरिकी डॉलर",
+    "eurgbp": "यूरो / ब्रिटिश पाउंड",
+    "audusd": "ऑस्ट्रेलियाई डॉलर / अमेरिकी डॉलर",
+    "btcusdt": "बिटकॉइन / टेथर",
+    "ethusdt": "एथेरियम / टेथर",
+    "adausdt": "कार्डानो / टेथर",
+    "dotusdt": "पोल्काडॉट / टेथर",
+    "linkusdt": "चेनलिंक / टेथर",
+    "uniusdt": "यूनिस्वैप / टेथर",
+    "aaveusdt": "आवे / टेथर",
+    "solusdt": "सोलाना / टेथर",
+    "baseCurrency": "आधार मुद्रा",
+    "quoteCurrency": "कोट मुद्रा",
+    "selected": "चयनित"
+  },
+  "status": {
+    "connected": "जुड़ा हुआ",
+    "disconnected": "डिस्कनेक्ट",
+    "connecting": "कनेक्ट हो रहा है...",
+    "updatesEvery5min": "क्रिप्टोकरेंसी हर 5 मिनट में, फॉरेक्स हर 15 मिनट में अपडेट होते हैं"
+  },
+  "disclaimer": {
+    "title": "निवेश अस्वीकरण",
+    "text": "यह जानकारी निवेश, वित्तीय, व्यापारिक या अन्य सलाह नहीं है। अपने जोखिम पर उपयोग करें। पिछला प्रदर्शन भविष्य के परिणामों की गारंटी नहीं देता।"
+  },
+  "signals": {
+    "title": "ट्रेडिंग सिग्नल",
+    "analysis": "विश्लेषण",
+    "buy": "खरीदें",
+    "sell": "बेचें",
+    "neutral": "तटस्थ",
+    "confidence": "आत्मविश्वास",
+    "explanation": "सिग्नल स्पष्टीकरण",
+    "explanations": {
+      "priceInfo": "मूल्य {price} {trend} ट्रेंड दिखाता है 24 घंटे में {change}% परिवर्तन के साथ",
+      "rsiInfo": "RSI {rsi} {condition} इंगित करता है",
+      "macdInfo": "MACD {signal} सिग्नल दिखाता है",
+      "smaInfo": "SMA {period} वर्तमान मूल्य के {position} है",
+      "bollingerInfo": "मूल्य बोलिंगर बैंड के {position} है",
+      "volumeInfo": "ट्रेडिंग वॉल्यूम औसत से {volume} है",
+      "growthBuy": "वृद्धि {change}%, {trend} ट्रेंड, खरीदारी की सलाह",
+      "fallSell": "गिरावट {change}%, {trend} ट्रेंड, बिक्री की सलाह",
+      "currentRate": "वर्तमान दर {base}/{quote}: {rate}",
+      "highRate": "दर {base}/{quote} उच्च: {rate}, संभावित वृद्धि",
+      "lowRate": "दर {base}/{quote} निम्न: {rate}, संभावित गिरावट",
+      "timeInfo": "समय: {hour}:{minute}",
+      "tradingHours": "ट्रेडिंग घंटे ({hour}:{minute}), संभावित वृद्धि",
+      "nonTradingHours": "ट्रेडिंग घंटों के बाहर ({hour}:{minute}), संभावित गिरावट",
+      "dataUnavailable": "डेटा अस्थायी रूप से अनुपलब्ध, तटस्थ सिग्नल का उपयोग",
+      "errorGettingData": "डेटा प्राप्त करने में त्रुटि, तटस्थ सिग्नल का उपयोग"
+    },
+    "trends": {
+      "upward": "ऊपरी",
+      "downward": "निचली",
+      "sideways": "साइडवेज"
+    },
+    "crypto": "क्रिप्टोकरेंसी",
+    "forex": "फॉरेक्स",
+    "nextUpdate": "अगला अपडेट",
+    "progress": "प्रगति",
+    "interval": "अंतराल",
+    "lastUpdate": "अंतिम अपडेट",
+    "technicalAnalysis": "तकनीकी विश्लेषण",
+    "technicalReasoning": "तकनीकी तर्क",
+    "technicalTerms": {
+      "rsiOversold": "RSI अधिक बिक्री",
+      "rsiOverbought": "RSI अधिक खरीद", 
+      "macdBullish": "MACD तेजी",
+      "macdBearish": "MACD मंदी",
+      "bollingerUpper": "मूल्य Bollinger Bands से ऊपर",
+      "bollingerLower": "मूल्य Bollinger Bands से नीचे",
+      "trendBullish": "तेजी का रुझान",
+      "trendBearish": "मंदी का रुझान",
+      "priceChange": "मूल्य परिवर्तन"
+    }
+  },
+  "expiration": {
+    "title": "समाप्ति पूर्वानुमान",
+    "expiration": "समाप्ति समय",
+    "entry": "प्रवेश समय",
+    "entryTime": "प्रवेश समय",
+    "expirationTime": "समाप्ति समय",
+    "expired": "समाप्त",
+    "confidence": "आत्मविश्वास",
+    "recommended": "अनुशंसित समय",
+    "warning": "इष्टतम प्रवेश समय समाप्त हो गया है, लेकिन सिग्नल अभी भी मान्य है",
+    "timeframes": {
+      "1min": "1 मिनट",
+      "3min": "3 मिनट", 
+      "5min": "5 मिनट"
+    }
+  },
+  "errors": {
+    "connectionFailed": "कनेक्शन विफल",
+    "dataError": "डेटा त्रुटि",
+    "signalError": "सिग्नल जेनरेशन त्रुटि",
+    "priceError": "मूल्य डेटा त्रुटि"
+  }
+}

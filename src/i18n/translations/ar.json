@@ -1,0 +1,149 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "retry": "إعادة المحاولة",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "minutes": "دقائق",
+    "next": "التالي",
+    "previous": "السابق",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "trading": "التداول",
+    "signals": "الإشارات",
+    "settings": "الإعدادات",
+    "language": "اللغة"
+  },
+  "trading": {
+    "title": "إشارات التداول",
+    "subtitle": "اختر زوج العملات للتحليل",
+    "description": "احصل على إشارات مهنية في الوقت الفعلي",
+    "selectPair": "اختر زوج العملات",
+    "currentPrice": "السعر الحالي",
+    "change24h": "التغيير 24 ساعة",
+    "volume": "الحجم",
+    "high24h": "الحد الأقصى 24 ساعة",
+    "low24h": "الحد الأدنى 24 ساعة",
+    "volatility": "التقلب",
+    "live": "مباشر",
+    "lastUpdate": "آخر تحديث",
+    "updating": "جاري التحديث...",
+    "update": "تحديث"
+  },
+  "chart": {
+    "title": "الرسم البياني",
+    "technicalAnalysis": "التحليل الفني في الوقت الفعلي",
+    "tradingView": "رسم بياني TradingView"
+  },
+  "currency": {
+    "eurusd": "اليورو / الدولار الأمريكي",
+    "gbpusd": "الجنيه الإسترليني / الدولار الأمريكي",
+    "audcad": "الدولار الأسترالي / الدولار الكندي",
+    "usdjpy": "الدولار الأمريكي / الين الياباني",
+    "usdcad": "الدولار الأمريكي / الدولار الكندي",
+    "nzdusd": "الدولار النيوزيلندي / الدولار الأمريكي",
+    "eurgbp": "اليورو / الجنيه الإسترليني",
+    "audusd": "الدولار الأسترالي / الدولار الأمريكي",
+    "btcusdt": "البيتكوين / التيذر",
+    "ethusdt": "الإيثيريوم / التيذر",
+    "adausdt": "الكاردانو / التيذر",
+    "dotusdt": "البولكادوت / التيذر",
+    "linkusdt": "ال chainlink / التيذر",
+    "uniusdt": "اليونيسواب / التيذر",
+    "aaveusdt": "الأف / التيذر",
+    "solusdt": "السولانا / التيذر",
+    "baseCurrency": "العملة الأساسية",
+    "quoteCurrency": "العملة المقتبسة",
+    "selected": "محدد"
+  },
+  "status": {
+    "connected": "متصل",
+    "disconnected": "غير متصل",
+    "connecting": "جاري الاتصال...",
+    "updatesEvery5min": "العملات المشفرة تتحدث كل 5 دقائق، الفوركس كل 15 دقيقة"
+  },
+  "disclaimer": {
+    "title": "إخلاء المسؤولية",
+    "text": "هذه المعلومات ليست نصيحة استثمارية أو مالية أو تجارية أو أي نصيحة أخرى. استخدمها على مسؤوليتك الخاصة. الأداء السابق لا يضمن النتائج المستقبلية."
+  },
+  "signals": {
+    "title": "إشارات التداول",
+    "analysis": "التحليل",
+    "buy": "شراء",
+    "sell": "بيع",
+    "neutral": "محايد",
+    "confidence": "الثقة",
+    "explanation": "شرح الإشارة",
+    "explanations": {
+      "priceInfo": "السعر {price} يُظهر اتجاه {trend} مع تغيير {change}% في 24 ساعة",
+      "rsiInfo": "RSI {rsi} يشير إلى {condition}",
+      "macdInfo": "MACD يُظهر إشارة {signal}",
+      "smaInfo": "SMA {period} هو {position} السعر الحالي",
+      "bollingerInfo": "السعر {position} خطوط بولينجر",
+      "volumeInfo": "حجم التداول {volume} المتوسط",
+      "growthBuy": "نمو {change}%، اتجاه {trend}، أنصح بالشراء",
+      "fallSell": "انخفاض {change}%، اتجاه {trend}، أنصح بالبيع",
+      "currentRate": "المعدل الحالي {base}/{quote}: {rate}",
+      "highRate": "معدل {base}/{quote} مرتفع: {rate}، نمو محتمل",
+      "lowRate": "معدل {base}/{quote} منخفض: {rate}، انخفاض محتمل",
+      "timeInfo": "الوقت: {hour}:{minute}",
+      "tradingHours": "ساعات التداول ({hour}:{minute})، نمو محتمل",
+      "nonTradingHours": "خارج ساعات التداول ({hour}:{minute})، انخفاض محتمل",
+      "dataUnavailable": "البيانات غير متاحة مؤقتاً، استخدام إشارة محايدة",
+      "errorGettingData": "خطأ في الحصول على البيانات، استخدام إشارة محايدة"
+    },
+    "trends": {
+      "upward": "صاعد",
+      "downward": "هابط",
+      "sideways": "جانبي"
+    },
+    "crypto": "العملات المشفرة",
+    "forex": "الفوركس",
+    "nextUpdate": "التحديث التالي",
+    "progress": "التقدم",
+    "interval": "الفترة",
+    "lastUpdate": "آخر تحديث",
+    "technicalAnalysis": "التحليل الفني",
+    "technicalReasoning": "المنطق الفني",
+    "technicalTerms": {
+      "rsiOversold": "RSI مُباع أكثر من اللازم",
+      "rsiOverbought": "RSI مُشترى أكثر من اللازم", 
+      "macdBullish": "MACD صاعد",
+      "macdBearish": "MACD هابط",
+      "bollingerUpper": "السعر أعلى من Bollinger Bands",
+      "bollingerLower": "السعر أقل من Bollinger Bands",
+      "trendBullish": "اتجاه صاعد",
+      "trendBearish": "اتجاه هابط",
+      "priceChange": "تغيير السعر"
+    }
+  },
+  "expiration": {
+    "title": "توقع انتهاء الصلاحية",
+    "expiration": "وقت انتهاء الصلاحية",
+    "entry": "وقت الدخول",
+    "entryTime": "وقت الدخول",
+    "expirationTime": "وقت انتهاء الصلاحية",
+    "expired": "منتهي الصلاحية",
+    "confidence": "الثقة",
+    "recommended": "الوقت الموصى به",
+    "warning": "انتهى الوقت الأمثل للدخول، لكن الإشارة لا تزال صالحة",
+    "timeframes": {
+      "1min": "دقيقة واحدة",
+      "3min": "3 دقائق", 
+      "5min": "5 دقائق"
+    }
+  },
+  "errors": {
+    "connectionFailed": "فشل الاتصال",
+    "dataError": "خطأ في البيانات",
+    "signalError": "خطأ في توليد الإشارة",
+    "priceError": "خطأ في بيانات السعر"
+  }
+}

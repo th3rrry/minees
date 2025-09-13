@@ -1,0 +1,151 @@
+{
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "retry": "Повторить",
+    "close": "Закрыть",
+    "back": "Назад",
+    "minutes": "минут",
+    "next": "Далее",
+    "previous": "Предыдущий",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "yes": "Да",
+    "no": "Нет",
+    "and": "и",
+    "for": "для"
+  },
+  "navigation": {
+    "home": "Главная",
+    "trading": "Трейдинг",
+    "signals": "Сигналы",
+    "settings": "Настройки",
+    "language": "Язык"
+  },
+  "trading": {
+    "title": "Торговые Сигналы",
+    "subtitle": "Выберите валютную пару для анализа",
+    "description": "Получайте профессиональные сигналы в реальном времени",
+    "selectPair": "Выбрать валютную пару",
+    "currentPrice": "Текущая цена",
+    "change24h": "Изменение за 24ч",
+    "volume": "Объем",
+    "high24h": "Максимум 24ч",
+    "low24h": "Минимум 24ч",
+    "volatility": "Волатильность",
+    "live": "В ПРЯМОМ ЭФИРЕ",
+    "lastUpdate": "Последнее обновление",
+    "updating": "Обновление...",
+    "update": "Обновить"
+  },
+  "chart": {
+    "title": "График",
+    "technicalAnalysis": "Технический анализ в реальном времени",
+    "tradingView": "График TradingView"
+  },
+  "currency": {
+    "eurusd": "Евро / Доллар США",
+    "gbpusd": "Британский фунт / Доллар США",
+    "audcad": "Австралийский доллар / Канадский доллар",
+    "usdjpy": "Доллар США / Японская иена",
+    "usdcad": "Доллар США / Канадский доллар",
+    "nzdusd": "Новозеландский доллар / Доллар США",
+    "eurgbp": "Евро / Британский фунт",
+    "audusd": "Австралийский доллар / Доллар США",
+    "btcusdt": "Биткоин / Tether",
+    "ethusdt": "Эфириум / Tether",
+    "adausdt": "Кардано / Tether",
+    "dotusdt": "Полкадот / Tether",
+    "linkusdt": "Чейнлинк / Tether",
+    "uniusdt": "Юнисвап / Tether",
+    "aaveusdt": "Ааве / Tether",
+    "solusdt": "Солана / Tether",
+    "baseCurrency": "Базовая валюта",
+    "quoteCurrency": "Котируемая валюта",
+    "selected": "Выбрано"
+  },
+  "status": {
+    "connected": "Подключено",
+    "disconnected": "Отключено",
+    "connecting": "Подключение...",
+    "updatesEvery5min": "Криптовалюты обновляются каждые 5 минут, Forex каждые 15 минут"
+  },
+  "disclaimer": {
+    "title": "Отказ от ответственности",
+    "text": "Данная информация не является инвестиционным, финансовым, торговым или иным советом. Используйте на свой страх и риск. Прошлые результаты не гарантируют будущих результатов."
+  },
+  "signals": {
+    "title": "Торговые сигналы",
+    "analysis": "Анализ",
+    "buy": "ПОКУПКА",
+    "sell": "ПРОДАЖА",
+    "neutral": "НЕЙТРАЛЬНО",
+    "confidence": "Уверенность",
+    "explanation": "Объяснение сигнала",
+    "explanations": {
+      "priceInfo": "Цена {price} показывает {trend} тренд с изменением {change}% за 24ч",
+      "rsiInfo": "RSI {rsi} указывает на {condition}",
+      "macdInfo": "MACD показывает {signal} сигнал",
+      "smaInfo": "SMA {period} находится {position} текущей цены",
+      "bollingerInfo": "Цена {position} полос Боллинджера",
+      "volumeInfo": "Объем торгов {volume} среднего",
+      "growthBuy": "Рост {change}%, {trend} тренд, рекомендую покупку",
+      "fallSell": "Падение {change}%, {trend} тренд, рекомендую продажу",
+      "currentRate": "Текущий курс {base}/{quote}: {rate}",
+      "highRate": "Курс {base}/{quote} высокий: {rate}, возможен рост",
+      "lowRate": "Курс {base}/{quote} низкий: {rate}, возможен спад",
+      "timeInfo": "Время: {hour}:{minute}",
+      "tradingHours": "Торговые часы ({hour}:{minute}), возможен рост",
+      "nonTradingHours": "Вне торговых часов ({hour}:{minute}), возможен спад",
+      "dataUnavailable": "Данные временно недоступны, используем нейтральный сигнал",
+      "errorGettingData": "Ошибка получения данных, используем нейтральный сигнал"
+    },
+    "trends": {
+      "upward": "восходящий",
+      "downward": "нисходящий", 
+      "sideways": "боковой"
+    },
+    "crypto": "Криптовалюты",
+    "forex": "Forex",
+    "nextUpdate": "Следующее обновление",
+    "progress": "Прогресс",
+    "interval": "Интервал",
+    "lastUpdate": "Последнее обновление",
+    "technicalAnalysis": "Технический анализ",
+    "technicalReasoning": "Техническое обоснование",
+    "technicalTerms": {
+      "rsiOversold": "RSI перепроданность",
+      "rsiOverbought": "RSI перекупленность", 
+      "macdBullish": "MACD бычий",
+      "macdBearish": "MACD медвежий",
+      "bollingerUpper": "Цена выше Bollinger Bands",
+      "bollingerLower": "Цена ниже Bollinger Bands",
+      "trendBullish": "Бычий тренд",
+      "trendBearish": "Медвежий тренд",
+      "priceChange": "Изменение цены"
+    }
+  },
+  "expiration": {
+    "title": "Прогноз экспирации",
+    "expiration": "Время экспирации",
+    "entry": "Время входа",
+    "entryTime": "Время входа",
+    "expirationTime": "Время экспирации",
+    "expired": "Истек",
+    "confidence": "Уверенность",
+    "recommended": "Рекомендуемое время",
+    "warning": "Оптимальное время входа истекло, но сигнал еще действителен",
+    "timeframes": {
+      "1min": "1 минута",
+      "3min": "3 минуты", 
+      "5min": "5 минут"
+    }
+  },
+  "errors": {
+    "connectionFailed": "Ошибка подключения",
+    "dataError": "Ошибка данных",
+    "signalError": "Ошибка генерации сигнала",
+    "priceError": "Ошибка данных о цене"
+  }
+}

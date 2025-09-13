@@ -1,0 +1,149 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "retry": "Wiederholen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "minutes": "Minuten",
+    "next": "Weiter",
+    "previous": "Vorherige",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "trading": "Trading",
+    "signals": "Signale",
+    "settings": "Einstellungen",
+    "language": "Sprache"
+  },
+  "trading": {
+    "title": "Trading Signale",
+    "subtitle": "Wählen Sie ein Währungspaar für die Analyse",
+    "description": "Erhalten Sie professionelle Signale in Echtzeit",
+    "selectPair": "Währungspaar auswählen",
+    "currentPrice": "Aktueller Preis",
+    "change24h": "24h Änderung",
+    "volume": "Volumen",
+    "high24h": "24h Hoch",
+    "low24h": "24h Tief",
+    "volatility": "Volatilität",
+    "live": "LIVE",
+    "lastUpdate": "Letzte Aktualisierung",
+    "updating": "Aktualisierung...",
+    "update": "Aktualisieren"
+  },
+  "chart": {
+    "title": "Chart",
+    "technicalAnalysis": "Technische Analyse in Echtzeit",
+    "tradingView": "TradingView Chart"
+  },
+  "currency": {
+    "eurusd": "Euro / US-Dollar",
+    "gbpusd": "Britisches Pfund / US-Dollar",
+    "audcad": "Australischer Dollar / Kanadischer Dollar",
+    "usdjpy": "US-Dollar / Japanischer Yen",
+    "usdcad": "US-Dollar / Kanadischer Dollar",
+    "nzdusd": "Neuseeländischer Dollar / US-Dollar",
+    "eurgbp": "Euro / Britisches Pfund",
+    "audusd": "Australischer Dollar / US-Dollar",
+    "btcusdt": "Bitcoin / Tether",
+    "ethusdt": "Ethereum / Tether",
+    "adausdt": "Cardano / Tether",
+    "dotusdt": "Polkadot / Tether",
+    "linkusdt": "Chainlink / Tether",
+    "uniusdt": "Uniswap / Tether",
+    "aaveusdt": "Aave / Tether",
+    "solusdt": "Solana / Tether",
+    "baseCurrency": "Basiswährung",
+    "quoteCurrency": "Notierungswährung",
+    "selected": "Ausgewählt"
+  },
+  "status": {
+    "connected": "Verbunden",
+    "disconnected": "Getrennt",
+    "connecting": "Verbinden...",
+    "updatesEvery5min": "Kryptowährungen werden alle 5 Minuten aktualisiert, Forex alle 15 Minuten"
+  },
+  "disclaimer": {
+    "title": "Haftungsausschluss",
+    "text": "Diese Informationen stellen keine Anlage-, Finanz-, Handels- oder sonstige Beratung dar. Nutzen Sie auf eigene Gefahr. Vergangene Leistungen garantieren keine zukünftigen Ergebnisse."
+  },
+  "signals": {
+    "title": "Trading-Signale",
+    "analysis": "Analyse",
+    "buy": "KAUFEN",
+    "sell": "VERKAUFEN",
+    "neutral": "NEUTRAL",
+    "confidence": "Vertrauen",
+    "explanation": "Signal-Erklärung",
+    "explanations": {
+      "priceInfo": "Preis {price} zeigt {trend} Trend mit {change}% Änderung in 24h",
+      "rsiInfo": "RSI {rsi} zeigt {condition}",
+      "macdInfo": "MACD zeigt {signal} Signal",
+      "smaInfo": "SMA {period} ist {position} aktuellen Preis",
+      "bollingerInfo": "Preis ist {position} Bollinger Bänder",
+      "volumeInfo": "Handelsvolumen ist {volume} Durchschnitt",
+      "growthBuy": "Wachstum {change}%, {trend} Trend, empfehle Kauf",
+      "fallSell": "Rückgang {change}%, {trend} Trend, empfehle Verkauf",
+      "currentRate": "Aktueller Kurs {base}/{quote}: {rate}",
+      "highRate": "Kurs {base}/{quote} hoch: {rate}, mögliches Wachstum",
+      "lowRate": "Kurs {base}/{quote} niedrig: {rate}, möglicher Rückgang",
+      "timeInfo": "Zeit: {hour}:{minute}",
+      "tradingHours": "Handelszeiten ({hour}:{minute}), mögliches Wachstum",
+      "nonTradingHours": "Außerhalb der Handelszeiten ({hour}:{minute}), möglicher Rückgang",
+      "dataUnavailable": "Daten vorübergehend nicht verfügbar, verwende neutrales Signal",
+      "errorGettingData": "Fehler beim Abrufen der Daten, verwende neutrales Signal"
+    },
+    "trends": {
+      "upward": "aufsteigend",
+      "downward": "absteigend",
+      "sideways": "seitwärts"
+    },
+    "crypto": "Kryptowährungen",
+    "forex": "Forex",
+    "nextUpdate": "Nächstes Update",
+    "progress": "Fortschritt",
+    "interval": "Intervall",
+    "lastUpdate": "Letztes Update",
+    "technicalAnalysis": "Technische Analyse",
+    "technicalReasoning": "Technische Begründung",
+    "technicalTerms": {
+      "rsiOversold": "RSI überverkauft",
+      "rsiOverbought": "RSI überkauft", 
+      "macdBullish": "MACD bullisch",
+      "macdBearish": "MACD bärisch",
+      "bollingerUpper": "Preis über Bollinger Bands",
+      "bollingerLower": "Preis unter Bollinger Bands",
+      "trendBullish": "Bullischer Trend",
+      "trendBearish": "Bärischer Trend",
+      "priceChange": "Preisänderung"
+    }
+  },
+  "expiration": {
+    "title": "Ablaufprognose",
+    "expiration": "Ablaufzeit",
+    "entry": "Einstiegszeit",
+    "entryTime": "Einstiegszeit",
+    "expirationTime": "Ablaufzeit",
+    "expired": "Abgelaufen",
+    "confidence": "Vertrauen",
+    "recommended": "Empfohlene Zeit",
+    "warning": "Optimale Einstiegszeit ist abgelaufen, aber Signal ist noch gültig",
+    "timeframes": {
+      "1min": "1 Minute",
+      "3min": "3 Minuten", 
+      "5min": "5 Minuten"
+    }
+  },
+  "errors": {
+    "connectionFailed": "Verbindung fehlgeschlagen",
+    "dataError": "Datenfehler",
+    "signalError": "Signalgenerierungsfehler",
+    "priceError": "Preisdatenfehler"
+  }
+}
