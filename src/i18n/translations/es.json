@@ -42,6 +42,12 @@
     "technicalAnalysis": "Análisis técnico en tiempo real",
     "tradingView": "Gráfico TradingView"
   },
+  "otc": {
+    "chartUnavailable": "Gráfico no disponible",
+    "chartDescription": "Los gráficos en tiempo real no están disponibles para pares de trading OTC (Over-The-Counter). Los mercados OTC operan de manera diferente a las bolsas centralizadas.",
+    "note": "Nota",
+    "noteDescription": "Las señales OTC se basan en datos del mercado Forex subyacente con factores adicionales de spread y comisión aplicados."
+  },
   "currency": {
     "eurusd": "Euro / Dólar Estadounidense",
     "gbpusd": "Libra Esterlina / Dólar Estadounidense",
@@ -97,7 +103,8 @@
       "tradingHours": "Horario de trading ({hour}:{minute}), posible crecimiento",
       "nonTradingHours": "Fuera del horario de trading ({hour}:{minute}), posible declive",
       "dataUnavailable": "Datos temporalmente no disponibles, usando señal neutral",
-      "errorGettingData": "Error obteniendo datos, usando señal neutral"
+      "errorGettingData": "Error obteniendo datos, usando señal neutral",
+      "otcContext": " (mercado OTC con factores de spread adicionales)"
     },
     "trends": {
       "upward": "alcista",
@@ -134,6 +141,11 @@
     "confidence": "Confianza",
     "recommended": "Tiempo Recomendado",
     "warning": "El tiempo óptimo de entrada ha expirado, pero la señal sigue siendo válida",
+    "entryTimeExpired": "Tiempo de Entrada Expirado",
+    "signalExpired": "Señal Expirada",
+    "waitForNextSignal": "Espera la siguiente señal",
+    "waiting": "Esperando",
+    "waitingForSignal": "Esperando señal",
     "timeframes": {
       "1min": "1 minuto",
       "3min": "3 minutos", 
@@ -145,5 +157,22 @@
     "dataError": "Error de datos",
     "signalError": "Error en generación de señal",
     "priceError": "Error en datos de precio"
+  },
+  "weekend": {
+    "title": "Estado del Mercado",
+    "forexClosed": "Los mercados Forex están cerrados los fines de semana",
+    "cryptoClosed": "Los mercados de criptomonedas están cerrados los fines de semana",
+    "otcAvailable": "Los mercados OTC están disponibles 24/7",
+    "nextAvailable": "Próxima disponibilidad:",
+    "weekendNotice": "Aviso de Fin de Semana",
+    "marketsClosed": "Algunos mercados están cerrados los fines de semana",
+    "onlyOTC": "Solo está disponible el trading OTC",
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo"
   }
 }

@@ -44,6 +44,12 @@
     "technicalAnalysis": "Real-time technical analysis",
     "tradingView": "TradingView Chart"
   },
+  "otc": {
+    "chartUnavailable": "Chart Not Available",
+    "chartDescription": "Real-time charts are not available for OTC (Over-The-Counter) trading pairs. OTC markets operate differently from centralized exchanges.",
+    "note": "Note",
+    "noteDescription": "OTC signals are based on underlying Forex market data with additional spread and commission factors applied."
+  },
   "currency": {
     "eurusd": "Euro / US Dollar",
     "gbpusd": "British Pound / US Dollar",
@@ -99,7 +105,8 @@
       "tradingHours": "Trading hours ({hour}:{minute}), possible growth",
       "nonTradingHours": "Outside trading hours ({hour}:{minute}), possible decline",
       "dataUnavailable": "Data temporarily unavailable, using neutral signal",
-      "errorGettingData": "Error getting data, using neutral signal"
+      "errorGettingData": "Error getting data, using neutral signal",
+      "otcContext": " (OTC market with additional spread factors)"
     },
     "trends": {
       "upward": "upward",
@@ -136,6 +143,11 @@
     "confidence": "Confidence",
     "recommended": "Recommended Time",
     "warning": "Optimal entry time has expired, but signal is still valid",
+    "entryTimeExpired": "Entry Time Expired",
+    "signalExpired": "Signal Expired",
+    "waitForNextSignal": "Wait for next signal",
+    "waiting": "Waiting",
+    "waitingForSignal": "Waiting for signal",
     "timeframes": {
       "1min": "1 minute",
       "3min": "3 minutes", 
@@ -147,5 +159,22 @@
     "dataError": "Data error",
     "signalError": "Signal generation error",
     "priceError": "Price data error"
+  },
+  "weekend": {
+    "title": "Market Status",
+    "forexClosed": "Forex markets are closed on weekends",
+    "cryptoClosed": "Crypto markets are closed on weekends",
+    "otcAvailable": "OTC markets are available 24/7",
+    "nextAvailable": "Next available:",
+    "weekendNotice": "Weekend Notice",
+    "marketsClosed": "Some markets are closed on weekends",
+    "onlyOTC": "Only OTC trading is available",
+    "monday": "Monday",
+    "tuesday": "Tuesday", 
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
   }
 }

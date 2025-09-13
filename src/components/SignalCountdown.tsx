@@ -9,12 +9,14 @@ interface SignalCountdownProps {
   lastUpdate: Date | null;
   isCrypto: boolean;
   isConnected: boolean;
+  pair?: string;
 }
 
 const SignalCountdown: React.FC<SignalCountdownProps> = ({
   lastUpdate,
   isCrypto,
-  isConnected
+  isConnected,
+  pair = ''
 }) => {
   const [timeLeft, setTimeLeft] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -23,6 +25,11 @@ const SignalCountdown: React.FC<SignalCountdownProps> = ({
   // Интервалы в секундах
   const CRYPTO_INTERVAL = 5 * 60; // 5 минут
   const FOREX_INTERVAL = 15 * 60; // 15 минут
+  const OTC_INTERVAL = 15 * 60; // 15 минут (как Forex)
+
+  const isOTCPair = () => {
+    return pair.startsWith('OTC_');
+  };
 
   useEffect(() => {
     if (!lastUpdate || !isConnected) {
@@ -33,7 +40,7 @@ const SignalCountdown: React.FC<SignalCountdownProps> = ({
 
     const updateCountdown = () => {
       const now = new Date();
-      const interval = isCrypto ? CRYPTO_INTERVAL : FOREX_INTERVAL;
+      const interval = isCrypto ? CRYPTO_INTERVAL : isOTCPair() ? OTC_INTERVAL : FOREX_INTERVAL;
       const nextUpdate = new Date(lastUpdate.getTime() + interval * 1000);
       const diff = Math.max(0, Math.floor((nextUpdate.getTime() - now.getTime()) / 1000));
       
@@ -107,7 +114,7 @@ const SignalCountdown: React.FC<SignalCountdownProps> = ({
             <Zap className="w-4 h-4 text-blue-400" />
           </motion.div>
           <span className="text-sm font-medium text-white">
-            {isCrypto ? t('signals.crypto') : t('signals.forex')} {t('signals.nextUpdate')}
+            {isCrypto ? t('signals.crypto') : isOTCPair() ? 'OTC' : t('signals.forex')} {t('signals.nextUpdate')}
           </span>
         </div>
         <span className={`text-sm font-medium ${getStatusColor()}`}>
@@ -147,7 +154,7 @@ const SignalCountdown: React.FC<SignalCountdownProps> = ({
       <div className="mt-3 pt-3 border-t border-gray-700/50">
         <div className="flex items-center justify-between text-xs text-gray-400">
           <span>
-            {t('signals.interval')}: {isCrypto ? '5' : '15'} {t('common.minutes')}
+            {t('signals.interval')}: {isCrypto ? '5' : isOTCPair() ? '15' : '15'} {t('common.minutes')}
           </span>
           <span>
             {t('signals.lastUpdate')}: {lastUpdate ? lastUpdate.toLocaleTimeString() : '--:--'}

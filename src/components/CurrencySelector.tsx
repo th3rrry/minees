@@ -6,14 +6,17 @@ import { TrendingUp, DollarSign, Globe } from 'lucide-react';
 import { CurrencyPair } from '@/types';
 import { CURRENCY_PAIRS } from '@/lib/constants';
 import { useTranslations } from '@/hooks/useTranslations';
+import { getMarketStatus } from '@/utils/weekendUtils';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface CurrencySelectorProps {
   onSelect: (pair: CurrencyPair) => void;
   selectedPair?: CurrencyPair;
+  marketCategory?: 'forex' | 'crypto' | 'otc';
+  onMarketCategoryChange?: (category: 'forex' | 'crypto' | 'otc') => void;
 }
 
-export default function CurrencySelector({ onSelect, selectedPair }: CurrencySelectorProps) {
+export default function CurrencySelector({ onSelect, selectedPair, marketCategory = 'forex', onMarketCategoryChange }: CurrencySelectorProps) {
   const [hoveredPair, setHoveredPair] = useState<string | null>(null);
   const { t } = useTranslations();
 
@@ -54,10 +57,65 @@ export default function CurrencySelector({ onSelect, selectedPair }: CurrencySel
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="flex justify-center mb-8"
+        className="flex justify-center mb-6"
       >
         <LanguageSwitcher />
       </motion.div>
+
+      {/* Market Category Selector */}
+      {onMarketCategoryChange && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center mb-8"
+        >
+          <div className="bg-gray-800/50 p-1 rounded-lg border border-gray-700">
+            <button
+              onClick={() => onMarketCategoryChange('forex')}
+              disabled={!getMarketStatus('forex').isAvailable}
+              className={`px-4 py-2 rounded-md transition-all ${
+                marketCategory === 'forex'
+                  ? 'bg-blue-600 text-white'
+                  : getMarketStatus('forex').isAvailable
+                    ? 'text-gray-400 hover:text-white'
+                    : 'text-gray-600 cursor-not-allowed opacity-50'
+              }`}
+              title={!getMarketStatus('forex').isAvailable ? t('weekend.forexClosed') : ''}
+            >
+              {t('signals.forex')}
+            </button>
+            <button
+              onClick={() => onMarketCategoryChange('crypto')}
+              disabled={!getMarketStatus('crypto').isAvailable}
+              className={`px-4 py-2 rounded-md transition-all ${
+                marketCategory === 'crypto'
+                  ? 'bg-blue-600 text-white'
+                  : getMarketStatus('crypto').isAvailable
+                    ? 'text-gray-400 hover:text-white'
+                    : 'text-gray-600 cursor-not-allowed opacity-50'
+              }`}
+              title={!getMarketStatus('crypto').isAvailable ? t('weekend.cryptoClosed') : ''}
+            >
+              {t('signals.crypto')}
+            </button>
+            <button
+              onClick={() => onMarketCategoryChange('otc')}
+              disabled={!getMarketStatus('otc').isAvailable}
+              className={`px-4 py-2 rounded-md transition-all ${
+                marketCategory === 'otc'
+                  ? 'bg-blue-600 text-white'
+                  : getMarketStatus('otc').isAvailable
+                    ? 'text-gray-400 hover:text-white'
+                    : 'text-gray-600 cursor-not-allowed opacity-50'
+              }`}
+              title={!getMarketStatus('otc').isAvailable ? t('weekend.otcAvailable') : ''}
+            >
+              OTC
+            </button>
+          </div>
+        </motion.div>
+      )}
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -65,7 +123,9 @@ export default function CurrencySelector({ onSelect, selectedPair }: CurrencySel
         transition={{ duration: 0.8, delay: 0.3 }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
       >
-        {CURRENCY_PAIRS.map((pair, index) => (
+        {CURRENCY_PAIRS
+          .filter(pair => pair.category === marketCategory)
+          .map((pair, index) => (
           <motion.div
             key={pair.id}
             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +148,7 @@ export default function CurrencySelector({ onSelect, selectedPair }: CurrencySel
                     {pair.symbol}
                   </h3>
                   <p className="text-sm text-gray-400">
-                    {t(`currency.${pair.id.toLowerCase()}`) || pair.name}
+                    {pair.category === 'otc' ? pair.name : (t(`currency.${pair.id.toLowerCase()}`) || pair.name)}
                   </p>
                 </div>
               </div>

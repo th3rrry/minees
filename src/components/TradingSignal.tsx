@@ -52,10 +52,14 @@ export default function TradingSignal({ pair }: TradingSignalProps) {
     }
   }, [pair, socket, isConnected]);
 
-  // Определяем тип пары (крипто или форекс)
+  // Определяем тип пары (крипто, форекс или OTC)
   const isCryptoPair = () => {
-    const cryptoPairs = ['BTCUSDT', 'ETHUSDT', 'ADAUSDT', 'DOTUSDT', 'LINKUSDT'];
+    const cryptoPairs = ['BTCUSDT', 'ETHUSDT', 'ADAUSDT', 'DOTUSDT', 'LINKUSDT', 'UNIUSDT', 'AAVEUSDT', 'SOLUSDT'];
     return cryptoPairs.includes(pair.toUpperCase());
+  };
+
+  const isOTCPair = () => {
+    return pair.startsWith('OTC_');
   };
 
   const getSignalIcon = (signalType: string) => {
@@ -186,7 +190,7 @@ export default function TradingSignal({ pair }: TradingSignalProps) {
                 </h4>
                 <p className="text-gray-300 leading-relaxed mb-3">
                   {signal.explanationParams ? 
-                    t(signal.explanation, signal.explanationParams) : 
+                    t(signal.explanation, signal.explanationParams) + (signal.explanationParams.otcContext ? t('signals.explanations.otcContext') : '') : 
                     t(signal.explanation)
                   }
                 </p>
@@ -227,6 +231,7 @@ export default function TradingSignal({ pair }: TradingSignalProps) {
                 lastUpdate={lastUpdate}
                 isCrypto={isCryptoPair()}
                 isConnected={isConnected}
+                pair={pair}
               />
 
               {/* Прогноз экспирации */}

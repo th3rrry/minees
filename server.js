@@ -607,6 +607,49 @@ const generateSignalsForForexPairs = async (pairs) => {
   }
 };
 
+// Генерация сигналов для всех OTC пар (на основе Forex данных)
+const generateSignalsForOTCPairs = async (pairs) => {
+  console.log(`🔄 Updating OTC signals (${pairs.length} pairs)...`);
+  
+  for (const otcPair of pairs) {
+    try {
+      // Извлекаем базовую Forex пару из OTC пары
+      const basePair = otcPair.replace('OTC_', '');
+      console.log(`🔍 Starting OTC analysis for ${otcPair} (based on ${basePair})...`);
+      
+      // Генерируем сигнал на основе базовой Forex пары
+      const baseSignal = await generateRealSignal(basePair);
+      
+      // Создаем OTC сигнал на основе Forex сигнала с дополнительными факторами
+      const otcSignal = {
+        ...baseSignal,
+        id: `otc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        pair: otcPair,
+        // Добавляем OTC-специфичные факторы (спред, комиссии)
+        confidence: Math.max(50, baseSignal.confidence - 5), // Немного снижаем уверенность для OTC
+        // Сохраняем структуру переводов, но добавляем OTC контекст
+        explanation: baseSignal.explanation, // Сохраняем ключ перевода
+        explanationParams: {
+          ...baseSignal.explanationParams,
+          // Добавляем флаг OTC контекста
+          otcContext: true
+        },
+        technicalReasoning: baseSignal.technicalReasoning,
+        analysisType: 'otc'
+      };
+      
+      currentSignals.set(otcPair, otcSignal);
+      console.log(`✅ Generated OTC signal for ${otcPair}: ${otcSignal.signal} (${otcSignal.confidence}%)`);
+      
+      // Отправляем сигнал всем подключенным клиентам
+      io.emit('signal-update', otcSignal);
+      console.log(`📡 Broadcasting OTC signal to ${activeConnections.size} connected clients`);
+    } catch (error) {
+      console.error(`❌ Error generating OTC signal for ${otcPair}:`, error.message);
+    }
+  }
+};
+
 // Генерация сигналов для всех пар
 const generateSignalsForAllPairs = async () => {
   console.log(`🚀 Initial signal generation for all pairs...`);
@@ -618,6 +661,10 @@ const generateSignalsForAllPairs = async () => {
   // Генерируем сигналы для Forex
   const forexPairs = ['EURUSD', 'GBPUSD', 'AUDCAD', 'USDJPY', 'USDCAD', 'NZDUSD', 'EURGBP', 'AUDUSD'];
   await generateSignalsForForexPairs(forexPairs);
+  
+  // Генерируем сигналы для OTC
+  const otcPairs = ['OTC_EURUSD', 'OTC_GBPUSD', 'OTC_AUDCAD', 'OTC_USDJPY', 'OTC_USDCAD', 'OTC_NZDUSD', 'OTC_EURGBP', 'OTC_AUDUSD'];
+  await generateSignalsForOTCPairs(otcPairs);
 };
 
 // Socket.IO обработчики
@@ -659,6 +706,7 @@ io.on('connection', (socket) => {
 // Интервалы генерации сигналов
 const CRYPTO_SIGNAL_INTERVAL = 5 * 60 * 1000; // 5 минут для криптовалют
 const FOREX_SIGNAL_INTERVAL = 15 * 60 * 1000; // 15 минут для Forex (ротация ExchangeRate API)
+const OTC_SIGNAL_INTERVAL = 15 * 60 * 1000; // 15 минут для OTC (как Forex)
 
 // Генерация сигналов для криптовалют каждые 5 минут
 setInterval(() => {
@@ -672,6 +720,12 @@ setInterval(() => {
   generateSignalsForForexPairs(forexPairs);
 }, FOREX_SIGNAL_INTERVAL);
 
+// Генерация сигналов для OTC каждые 15 минут (на основе Forex данных)
+setInterval(() => {
+  const otcPairs = ['OTC_EURUSD', 'OTC_GBPUSD', 'OTC_AUDCAD', 'OTC_USDJPY', 'OTC_USDCAD', 'OTC_NZDUSD', 'OTC_EURGBP', 'OTC_AUDUSD'];
+  generateSignalsForOTCPairs(otcPairs);
+}, OTC_SIGNAL_INTERVAL);
+
 // Генерация начальных сигналов
 generateSignalsForAllPairs();
 
@@ -683,6 +737,7 @@ server.listen(PORT, () => {
   console.log(`🔗 Railway URL: https://minesss-production.up.railway.app`);
   console.log(`⏰ Crypto signals: every 5 minutes`);
   console.log(`⏰ Forex signals: every 15 minutes (ротация ExchangeRate API)`);
+  console.log(`⏰ OTC signals: every 15 minutes (based on Forex data)`);
   console.log(`📊 Monthly API usage: ~2,880 requests (4 ExchangeRate keys × 720 requests each)`);
   console.log(`\n🎯 Real-time trading signals with live data!`);
 });

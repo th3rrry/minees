@@ -5,6 +5,7 @@ export interface CurrencyPair {
   base: string;
   quote: string;
   icon?: string;
+  category?: 'forex' | 'crypto' | 'otc';
 }
 
 export interface TradingSignal {

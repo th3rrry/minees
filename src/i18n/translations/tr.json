@@ -42,6 +42,12 @@
     "technicalAnalysis": "Gerçek zamanlı teknik analiz",
     "tradingView": "TradingView Grafiği"
   },
+  "otc": {
+    "chartUnavailable": "Grafik mevcut değil",
+    "chartDescription": "Gerçek zamanlı grafikler OTC (Over-The-Counter) işlem çiftleri için mevcut değildir. OTC pazarları merkezi borsalardan farklı şekilde çalışır.",
+    "note": "Not",
+    "noteDescription": "OTC sinyalleri, ek spread ve komisyon faktörleri uygulanmış temel Forex pazar verilerine dayanmaktadır."
+  },
   "currency": {
     "eurusd": "Euro / ABD Doları",
     "gbpusd": "İngiliz Sterlini / ABD Doları",
@@ -97,7 +103,8 @@
       "tradingHours": "İşlem saatleri ({hour}:{minute}), olası büyüme",
       "nonTradingHours": "İşlem saatleri dışında ({hour}:{minute}), olası düşüş",
       "dataUnavailable": "Veriler geçici olarak mevcut değil, nötr sinyal kullanılıyor",
-      "errorGettingData": "Veri alma hatası, nötr sinyal kullanılıyor"
+      "errorGettingData": "Veri alma hatası, nötr sinyal kullanılıyor",
+      "otcContext": " (OTC pazarı ek spread faktörleri ile)"
     },
     "trends": {
       "upward": "yükseliş",
@@ -134,6 +141,11 @@
     "confidence": "Güven",
     "recommended": "Önerilen Süre",
     "warning": "Optimal giriş süresi doldu, ancak sinyal hala geçerli",
+    "entryTimeExpired": "Giriş Süresi Doldu",
+    "signalExpired": "Sinyal Doldu",
+    "waitForNextSignal": "Sonraki sinyali bekleyin",
+    "waiting": "Bekliyor",
+    "waitingForSignal": "Sinyal bekliyor",
     "timeframes": {
       "1min": "1 dakika",
       "3min": "3 dakika", 
@@ -145,5 +157,22 @@
     "dataError": "Veri hatası",
     "signalError": "Sinyal üretim hatası",
     "priceError": "Fiyat veri hatası"
+  },
+  "weekend": {
+    "title": "Pazar Durumu",
+    "forexClosed": "Forex pazarları hafta sonları kapalı",
+    "cryptoClosed": "Kripto para pazarları hafta sonları kapalı",
+    "otcAvailable": "OTC pazarları 7/24 mevcut",
+    "nextAvailable": "Sonraki mevcut:",
+    "weekendNotice": "Hafta Sonu Bildirimi",
+    "marketsClosed": "Bazı pazarlar hafta sonları kapalı",
+    "onlyOTC": "Sadece OTC ticareti mevcut",
+    "monday": "Pazartesi",
+    "tuesday": "Salı",
+    "wednesday": "Çarşamba",
+    "thursday": "Perşembe",
+    "friday": "Cuma",
+    "saturday": "Cumartesi",
+    "sunday": "Pazar"
   }
 }

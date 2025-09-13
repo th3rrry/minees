@@ -5,14 +5,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import CurrencySelector from '@/components/CurrencySelector';
 import TradingViewChart from '@/components/TradingViewChart';
+import OTCChart from '@/components/OTCChart';
 import TradingSignal from '@/components/TradingSignal';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import WeekendNotice from '@/components/WeekendNotice';
 import { CurrencyPair } from '@/types';
 import { useTranslations } from '@/hooks/useTranslations';
+import { isWeekend, getMarketStatus } from '@/utils/weekendUtils';
 
 export default function Home() {
   const [selectedPair, setSelectedPair] = useState<CurrencyPair | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  
+  // Определяем начальную категорию рынка с учетом выходных
+  const getInitialMarketCategory = (): 'forex' | 'crypto' | 'otc' => {
+    if (isWeekend()) {
+      return 'otc'; // В выходные только OTC
+    }
+    return 'forex'; // По умолчанию Forex
+  };
+  
+  const [marketCategory, setMarketCategory] = useState<'forex' | 'crypto' | 'otc'>(getInitialMarketCategory());
   const { t } = useTranslations();
 
   const handlePairSelect = (pair: CurrencyPair) => {
@@ -30,6 +43,18 @@ export default function Home() {
     setIsAnalyzing(false);
   };
 
+  // Безопасное изменение категории рынка с проверкой выходных
+  const handleMarketCategoryChange = (newCategory: 'forex' | 'crypto' | 'otc') => {
+    const marketStatus = getMarketStatus(newCategory);
+    
+    if (marketStatus.isAvailable) {
+      setMarketCategory(newCategory);
+    } else {
+      // Если рынок недоступен, переключаем на OTC
+      setMarketCategory('otc');
+    }
+  };
+
   return (
     <div className="min-h-screen">
 
@@ -42,7 +67,14 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <CurrencySelector onSelect={handlePairSelect} />
+            {/* Уведомление о выходных */}
+            <WeekendNotice />
+            
+            <CurrencySelector 
+              onSelect={handlePairSelect} 
+              marketCategory={marketCategory}
+              onMarketCategoryChange={handleMarketCategoryChange}
+            />
           </motion.div>
         ) : (
           <motion.div
@@ -111,7 +143,11 @@ export default function Home() {
             {/* Main Content */}
             <div className="space-y-8">
               {/* Chart */}
-              <TradingViewChart pair={selectedPair} />
+              {selectedPair.category === 'otc' ? (
+                <OTCChart pair={selectedPair} />
+              ) : (
+                <TradingViewChart pair={selectedPair} />
+              )}
               
               {/* Signal */}
               <TradingSignal pair={selectedPair.id} />

@@ -8,6 +8,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Euro / US Dollar',
     base: 'EUR',
     quote: 'USD',
+    category: 'forex',
   },
   {
     id: 'GBPUSD',
@@ -15,6 +16,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'British Pound / US Dollar',
     base: 'GBP',
     quote: 'USD',
+    category: 'forex',
   },
   {
     id: 'AUDCAD',
@@ -22,6 +24,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Australian Dollar / Canadian Dollar',
     base: 'AUD',
     quote: 'CAD',
+    category: 'forex',
   },
   {
     id: 'USDJPY',
@@ -29,6 +32,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'US Dollar / Japanese Yen',
     base: 'USD',
     quote: 'JPY',
+    category: 'forex',
   },
   {
     id: 'USDCAD',
@@ -36,6 +40,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'US Dollar / Canadian Dollar',
     base: 'USD',
     quote: 'CAD',
+    category: 'forex',
   },
   {
     id: 'NZDUSD',
@@ -43,6 +48,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'New Zealand Dollar / US Dollar',
     base: 'NZD',
     quote: 'USD',
+    category: 'forex',
   },
   {
     id: 'EURGBP',
@@ -50,6 +56,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Euro / British Pound',
     base: 'EUR',
     quote: 'GBP',
+    category: 'forex',
   },
   {
     id: 'AUDUSD',
@@ -57,6 +64,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Australian Dollar / US Dollar',
     base: 'AUD',
     quote: 'USD',
+    category: 'forex',
   },
   // Криптовалютные пары
   {
@@ -65,6 +73,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Bitcoin / Tether',
     base: 'BTC',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'ETHUSDT',
@@ -72,6 +81,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Ethereum / Tether',
     base: 'ETH',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'ADAUSDT',
@@ -79,6 +89,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Cardano / Tether',
     base: 'ADA',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'DOTUSDT',
@@ -86,6 +97,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Polkadot / Tether',
     base: 'DOT',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'LINKUSDT',
@@ -93,6 +105,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Chainlink / Tether',
     base: 'LINK',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'UNIUSDT',
@@ -100,6 +113,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Uniswap / Tether',
     base: 'UNI',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'AAVEUSDT',
@@ -107,6 +121,7 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Aave / Tether',
     base: 'AAVE',
     quote: 'USDT',
+    category: 'crypto',
   },
   {
     id: 'SOLUSDT',
@@ -114,6 +129,72 @@ export const CURRENCY_PAIRS: CurrencyPair[] = [
     name: 'Solana / Tether',
     base: 'SOL',
     quote: 'USDT',
+    category: 'crypto',
+  },
+  // OTC пары
+  {
+    id: 'OTC_EURUSD',
+    symbol: 'OTC EUR/USD',
+    name: 'OTC Euro / US Dollar',
+    base: 'EUR',
+    quote: 'USD',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_GBPUSD',
+    symbol: 'OTC GBP/USD',
+    name: 'OTC British Pound / US Dollar',
+    base: 'GBP',
+    quote: 'USD',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_AUDCAD',
+    symbol: 'OTC AUD/CAD',
+    name: 'OTC Australian Dollar / Canadian Dollar',
+    base: 'AUD',
+    quote: 'CAD',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_USDJPY',
+    symbol: 'OTC USD/JPY',
+    name: 'OTC US Dollar / Japanese Yen',
+    base: 'USD',
+    quote: 'JPY',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_USDCAD',
+    symbol: 'OTC USD/CAD',
+    name: 'OTC US Dollar / Canadian Dollar',
+    base: 'USD',
+    quote: 'CAD',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_NZDUSD',
+    symbol: 'OTC NZD/USD',
+    name: 'OTC New Zealand Dollar / US Dollar',
+    base: 'NZD',
+    quote: 'USD',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_EURGBP',
+    symbol: 'OTC EUR/GBP',
+    name: 'OTC Euro / British Pound',
+    base: 'EUR',
+    quote: 'GBP',
+    category: 'otc',
+  },
+  {
+    id: 'OTC_AUDUSD',
+    symbol: 'OTC AUD/USD',
+    name: 'OTC Australian Dollar / US Dollar',
+    base: 'AUD',
+    quote: 'USD',
+    category: 'otc',
   },
 ];
 

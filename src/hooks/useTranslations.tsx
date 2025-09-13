@@ -28,9 +28,9 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
         setTranslations(translationModule.default);
       } catch (error) {
         console.error(`Failed to load translations for ${locale}:`, error);
-        // Fallback к русскому языку
-        if (locale !== 'ru') {
-          const fallbackModule = await import('@/i18n/translations/ru.json');
+        // Fallback к английскому языку
+        if (locale !== 'en') {
+          const fallbackModule = await import('@/i18n/translations/en.json');
           setTranslations(fallbackModule.default);
         }
       }
@@ -41,26 +41,53 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
 
   // Загружаем сохраненный язык из localStorage
   useEffect(() => {
-    const savedLocale = localStorage.getItem('locale') as Locale;
-    if (savedLocale && locales.some(l => l.code === savedLocale)) {
-      setLocaleState(savedLocale);
+    try {
+      const savedLocale = localStorage.getItem('locale') as Locale;
+      if (savedLocale && locales.some(l => l.code === savedLocale)) {
+        setLocaleState(savedLocale);
+        // Устанавливаем атрибуты HTML сразу
+        const htmlElement = document.documentElement;
+        htmlElement.dir = isRTL(savedLocale) ? 'rtl' : 'ltr';
+        htmlElement.lang = savedLocale;
+        if (isRTL(savedLocale)) {
+          htmlElement.classList.add('rtl');
+        } else {
+          htmlElement.classList.remove('rtl');
+        }
+      } else {
+        // Если нет сохраненного языка, устанавливаем английский по умолчанию
+        setLocaleState(defaultLocale);
+        localStorage.setItem('locale', defaultLocale);
+        const htmlElement = document.documentElement;
+        htmlElement.dir = 'ltr';
+        htmlElement.lang = defaultLocale;
+        htmlElement.classList.remove('rtl');
+      }
+    } catch (error) {
+      console.error('Error loading saved locale:', error);
+      // Fallback к английскому
+      setLocaleState(defaultLocale);
     }
   }, []);
 
   const setLocale = (newLocale: Locale) => {
-    setLocaleState(newLocale);
-    localStorage.setItem('locale', newLocale);
-    
-    // Обновляем dir атрибут для RTL языков
-    const htmlElement = document.documentElement;
-    htmlElement.dir = isRTL(newLocale) ? 'rtl' : 'ltr';
-    htmlElement.lang = newLocale;
-    
-    // Добавляем класс для RTL стилей
-    if (isRTL(newLocale)) {
-      htmlElement.classList.add('rtl');
-    } else {
-      htmlElement.classList.remove('rtl');
+    try {
+      setLocaleState(newLocale);
+      localStorage.setItem('locale', newLocale);
+      
+      // Обновляем dir атрибут для RTL языков
+      const htmlElement = document.documentElement;
+      htmlElement.dir = isRTL(newLocale) ? 'rtl' : 'ltr';
+      htmlElement.lang = newLocale;
+      
+      // Добавляем класс для RTL стилей
+      if (isRTL(newLocale)) {
+        htmlElement.classList.add('rtl');
+      } else {
+        htmlElement.classList.remove('rtl');
+      }
+    } catch (error) {
+      console.error('Error setting locale:', error);
     }
   };
 

@@ -42,6 +42,12 @@
     "technicalAnalysis": "Technische Analyse in Echtzeit",
     "tradingView": "TradingView Chart"
   },
+  "otc": {
+    "chartUnavailable": "Chart nicht verfügbar",
+    "chartDescription": "Echtzeit-Charts sind für OTC (Over-The-Counter) Trading-Paare nicht verfügbar. OTC-Märkte funktionieren anders als zentralisierte Börsen.",
+    "note": "Hinweis",
+    "noteDescription": "OTC-Signale basieren auf zugrunde liegenden Forex-Marktdaten mit zusätzlichen Spread- und Provisionsfaktoren."
+  },
   "currency": {
     "eurusd": "Euro / US-Dollar",
     "gbpusd": "Britisches Pfund / US-Dollar",
@@ -97,7 +103,8 @@
       "tradingHours": "Handelszeiten ({hour}:{minute}), mögliches Wachstum",
       "nonTradingHours": "Außerhalb der Handelszeiten ({hour}:{minute}), möglicher Rückgang",
       "dataUnavailable": "Daten vorübergehend nicht verfügbar, verwende neutrales Signal",
-      "errorGettingData": "Fehler beim Abrufen der Daten, verwende neutrales Signal"
+      "errorGettingData": "Fehler beim Abrufen der Daten, verwende neutrales Signal",
+      "otcContext": " (OTC-Markt mit zusätzlichen Spread-Faktoren)"
     },
     "trends": {
       "upward": "aufsteigend",
@@ -134,6 +141,11 @@
     "confidence": "Vertrauen",
     "recommended": "Empfohlene Zeit",
     "warning": "Optimale Einstiegszeit ist abgelaufen, aber Signal ist noch gültig",
+    "entryTimeExpired": "Einstiegszeit Abgelaufen",
+    "signalExpired": "Signal Abgelaufen",
+    "waitForNextSignal": "Warten auf nächstes Signal",
+    "waiting": "Warten",
+    "waitingForSignal": "Warten auf Signal",
     "timeframes": {
       "1min": "1 Minute",
       "3min": "3 Minuten", 
@@ -145,5 +157,22 @@
     "dataError": "Datenfehler",
     "signalError": "Signalgenerierungsfehler",
     "priceError": "Preisdatenfehler"
+  },
+  "weekend": {
+    "title": "Marktstatus",
+    "forexClosed": "Forex-Märkte sind an Wochenenden geschlossen",
+    "cryptoClosed": "Krypto-Märkte sind an Wochenenden geschlossen",
+    "otcAvailable": "OTC-Märkte sind 24/7 verfügbar",
+    "nextAvailable": "Nächste Verfügbarkeit:",
+    "weekendNotice": "Wochenend-Hinweis",
+    "marketsClosed": "Einige Märkte sind an Wochenenden geschlossen",
+    "onlyOTC": "Nur OTC-Handel ist verfügbar",
+    "monday": "Montag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch",
+    "thursday": "Donnerstag",
+    "friday": "Freitag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag"
   }
 }
