@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "env": {
+    "NEXT_PUBLIC_SOCKET_URL": "wss://web-production-d0233.up.railway.app"
+  },
   "functions": {
     "src/pages/api/**/*.ts": {
       "maxDuration": 30
